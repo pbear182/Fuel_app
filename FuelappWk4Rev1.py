@@ -13,12 +13,8 @@ unleaded = 1
 premium_unleaded = 2
 Octane = 6
 
-recent = 'yesterday'
-current = 'today'
-future = 'tomorrow'
-
-NineEight_today = get_fuel(Octane,current)
-NineEight_tmr = get_fuel(Octane,future)
+NineEight_today = get_fuel(Octane,'today')
+NineEight_tmr = get_fuel(Octane,'tomorrow')
 
 Combined_NineEight = NineEight_today + NineEight_tmr
 
@@ -28,8 +24,6 @@ sorted_Combined_NineEight = sorted(Combined_NineEight, key = by_price)
 
 Fuel_html_list = ''
 for word in sorted_Combined_NineEight:
-    #my_list += '<li>' + word + '</li>'
-    #my_list += '<li>{}</li>'.format(word)
     Fuel_html_list = Fuel_html_list + '<td>' + word['date'] + '</td>'
     Fuel_html_list = Fuel_html_list + '<td>' + word['address'] + '</td>'
     Fuel_html_list = Fuel_html_list + '<td>' + word['location'] + '</td>'
