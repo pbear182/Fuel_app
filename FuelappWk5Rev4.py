@@ -53,8 +53,8 @@ tableheading = '''
 
 html = '<table>' + tableheading + str({dateTimeObj}) + ''.join(tr_list) + '</table>'
 
-with open('render1.html', 'w') as f:
-        f.write(html)
+with open('Fuel.html', 'w') as f:
+        f.write('<style>table, td{border: 1px solid blue}</style>' + html)
 
 
 
